@@ -95,6 +95,11 @@ st.write(""" #### Place your YouTube playlist link here 👇""")
 # input text field
 playlist_url = st.text_input("", placeholder="https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID", label_visibility="collapsed")
 
+st.write(""" #### Place your Spotify playlist link here 👇""")
+
+# input text field
+playlist_url = st.text_input("", placeholder="https://open.spotify.com/playlist/YOUR_PLAYLIST_ID", label_visibility="collapsed")
+
 # Extract playlist ID from URL
 playlist_id = extract_playlist_id(playlist_url)
 
