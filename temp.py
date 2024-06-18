@@ -40,14 +40,7 @@
 
 #     return artist_id
 
-# def get_songs_by_artists(token, artist_id):
-#     search_url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks"
-#     headers = get_auth_header(token)
 
-#     result = get(search_url, headers=headers)
-#     json_result = json.loads(result.content)["tracks"]
-
-#     return json_result
 
     
 
