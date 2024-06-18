@@ -1,13 +1,13 @@
 import streamlit as st
 import json
 import time
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import base64
 from requests import post,get
 from googleapiclient.discovery import build
 
-load_dotenv()
+# load_dotenv()
 
 # client_id = os.getenv("SPOTIFY_CLIENT_ID")
 # client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
