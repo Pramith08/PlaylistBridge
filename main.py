@@ -83,26 +83,6 @@ def search_song(token, song_name):
         return response_data["tracks"]["items"][0]["external_urls"]["spotify"]
     return None
 
-def get_user_id(access_token):
-    # Spotify current user endpoint
-    user_url = "https://api.spotify.com/v1/me"
-
-    # Headers for the GET request
-    headers = {
-        "Authorization": f"Bearer {access_token}"
-    }
-
-    # Make the GET request to get current user information
-    response = get(user_url, headers=headers)
-
-    # Parse and return the user ID
-    if response.status_code == 200:
-        user_data = response.json()
-        user_id = user_data.get("id")
-        return user_id
-    else:
-        print("Failed to get user ID")
-        return None
 
 ### main ###
 
