@@ -9,9 +9,16 @@ from googleapiclient.discovery import build
 
 load_dotenv()
 
-client_id = os.getenv("SPOTIFY_CLIENT_ID")
-client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
-youtube_api = os.getenv("YOUTUBE_API")
+# client_id = os.getenv("SPOTIFY_CLIENT_ID")
+# client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
+# youtube_api = os.getenv("YOUTUBE_API")
+
+client_id="ff3f7303af1d46e1829d4b1d9d346ec4"
+client_secret="b1076e1dd7624eed9355780f4c43db68"
+
+youtube_api="AIzaSyDt2lCqAuftcOSrZbc5wV8Hh-c5FSw6Bbo"
+
+
 
 
 def get_song_names_from_link(playlist_id):
