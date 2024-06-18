@@ -1,24 +1,17 @@
 import streamlit as st
 import json
 import time
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 import base64
 from requests import post,get
 from googleapiclient.discovery import build
 
-# load_dotenv()
+load_dotenv()
 
-# client_id = os.getenv("SPOTIFY_CLIENT_ID")
-# client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
-# youtube_api = os.getenv("YOUTUBE_API")
-
-client_id="ff3f7303af1d46e1829d4b1d9d346ec4"
-client_secret="b1076e1dd7624eed9355780f4c43db68"
-
-youtube_api="AIzaSyDt2lCqAuftcOSrZbc5wV8Hh-c5FSw6Bbo"
-
-
+client_id = os.getenv("SPOTIFY_CLIENT_ID")
+client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
+youtube_api = os.getenv("YOUTUBE_API")
 
 
 def get_song_names_from_link(playlist_id):

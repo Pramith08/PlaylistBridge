@@ -1,0 +1,5 @@
+streamlit==0.89.0
+json5==0.9.6
+requests==2.26.0
+google-api-python-client==2.38.0
+python-dotenv==0.19.1
