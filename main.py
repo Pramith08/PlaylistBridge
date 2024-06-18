@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 import base64
 from requests import post, get
-from googleapiclient.discovery import build
+# from googleapiclient.discovery import build
 
 load_dotenv()
 
@@ -37,27 +37,27 @@ def get_auth_header(token):
 def get_song_names_from_link(playlist_id):
     song_list = []
 
-    youtube = build('youtube', 'v3', developerKey=youtube_api)
+    # youtube = build('youtube', 'v3', developerKey=youtube_api)
 
-    request = youtube.playlistItems().list(
-        part="snippet",
-        playlistId=playlist_id,
-        maxResults=50
-    )
+    # request = youtube.playlistItems().list(
+    #     part="snippet",
+    #     playlistId=playlist_id,
+    #     maxResults=50
+    # )
 
-    response = request.execute()
+    # response = request.execute()
 
-    for item in response['items']:
-        title = item['snippet']['title']
+    # for item in response['items']:
+    #     title = item['snippet']['title']
 
-        if "|" in title:
-            song_name, artist = title.split("|", 1)
-        elif "-" in title:
-            song_name, artist = title.split("-", 1)
-        else:
-            song_name = title
+    #     if "|" in title:
+    #         song_name, artist = title.split("|", 1)
+    #     elif "-" in title:
+    #         song_name, artist = title.split("-", 1)
+    #     else:
+    #         song_name = title
 
-        song_list.append(song_name.strip())
+    #     song_list.append(song_name.strip())
 
     return song_list
 
