@@ -100,6 +100,7 @@ playlist_id = extract_playlist_id(playlist_url)
 
 # submit button
 if st.button("submit"):
+    
     if playlist_id:
         idx = 1
         st.divider()
